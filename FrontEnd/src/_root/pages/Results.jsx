@@ -167,13 +167,13 @@ function handleAddToCart(product , quantity) {
 
 function fetchData() {
   if(searchTerm == "all") {
-    axios.get('http://localhost:8080/product/').then((response) => {
+    axios.get('http://code-warriors-production.up.railway.app/product/').then((response) => {
       setData(response.data)
       setFilteredData(response.data);
       console.log(response.data)
     })
   } else {
-    axios.post('http://localhost:8080/product/search', {keyword: searchTerm}).then((response) => {
+    axios.post('http://code-warriors-production.up.railway.app/product/search', {keyword: searchTerm}).then((response) => {
       setData(response.data)
       setFilteredData(response.data);
       console.log(response.data)
