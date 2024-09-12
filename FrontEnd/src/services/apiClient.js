@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'http://code-warriors-production.up.railway.app',
+  baseURL: 'https://code-warriors-production.up.railway.app',
 });
 
 apiClient.interceptors.request.use(config => {

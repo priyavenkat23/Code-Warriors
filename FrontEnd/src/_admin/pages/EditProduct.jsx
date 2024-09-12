@@ -94,7 +94,7 @@ const EditProduct = () => {
         };
     
         try {
-          const response = await axios.put(`http://code-warriors-production.up.railway.app/product/${productId}`, formData, {
+          const response = await axios.put(`https://code-warriors-production.up.railway.app/product/${productId}`, formData, {
             headers: {
               'Content-Type': 'application/json'
             }

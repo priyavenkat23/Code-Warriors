@@ -60,7 +60,7 @@ const cards = recommendations.map((card, index) => (
 useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://code-warriors-production.up.railway.app/product/${productId}`);
+        const response = await axios.get(`https://code-warriors-production.up.railway.app/product/${productId}`);
         setProduct(response.data);
         console.log(response.data)
       } catch (error) {
@@ -127,7 +127,7 @@ const createReview = () => {
             productId: productId,
         },
     };
-    axios.post('http://code-warriors-production.up.railway.app/api/review/create', payload).then((response) => {
+    axios.post('https://code-warriors-production.up.railway.app/api/review/create', payload).then((response) => {
         console.log(response.data);
         getReview();
     })
@@ -137,7 +137,7 @@ const createReview = () => {
 };
  
 const deleteReview = (reviewId) => {
-    axios.delete(`http://code-warriors-production.up.railway.app/api/review/delete?reviewID=${reviewId}`).then((response) => {
+    axios.delete(`https://code-warriors-production.up.railway.app/api/review/delete?reviewID=${reviewId}`).then((response) => {
             console.log(response.message);
             window.location.reload();
             // Update the state to remove the deleted review
@@ -150,8 +150,8 @@ const deleteReview = (reviewId) => {
 
 function getReview() {
     
-    //axios.get(`http://code-warriors-production.up.railway.app/api/review/get?productID=${productId}`).then((response) => {
-        axios.get(`http://code-warriors-production.up.railway.app/api/review/get?productID=${productId}`).then((response) => {
+    //axios.get(`https://code-warriors-production.up.railway.app/api/review/get?productID=${productId}`).then((response) => {
+        axios.get(`https://code-warriors-production.up.railway.app/api/review/get?productID=${productId}`).then((response) => {
         console.log(response.data)
         
         setReviews(response.data);

@@ -77,7 +77,7 @@ const CreateProduct = () => {
         };
     
         try {
-          const response = await axios.post('http://code-warriors-production.up.railway.app/product/add', formData, {
+          const response = await axios.post('https://code-warriors-production.up.railway.app/product/add', formData, {
             headers: {
               'Content-Type': 'application/json'
             }

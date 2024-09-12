@@ -38,7 +38,7 @@ export default function AdminAuthPage() {
   const registerAdmin = async (e) => {
 
     try {
-      const response = await axios.post('http://code-warriors-production.up.railway.app/register', {
+      const response = await axios.post('https://code-warriors-production.up.railway.app/register', {
         userName: e.target.usernameRegister.value,
         password: e.target.passwordRegister.value,
         role: "ADMIN"

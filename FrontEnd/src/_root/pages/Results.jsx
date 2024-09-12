@@ -167,13 +167,13 @@ function handleAddToCart(product , quantity) {
 
 function fetchData() {
   if(searchTerm == "all") {
-    axios.get('http://code-warriors-production.up.railway.app/product/').then((response) => {
+    axios.get('https://code-warriors-production.up.railway.app/product/').then((response) => {
       setData(response.data)
       setFilteredData(response.data);
       console.log(response.data)
     })
   } else {
-    axios.post('http://code-warriors-production.up.railway.app/product/search', {keyword: searchTerm}).then((response) => {
+    axios.post('https://code-warriors-production.up.railway.app/product/search', {keyword: searchTerm}).then((response) => {
       setData(response.data)
       setFilteredData(response.data);
       console.log(response.data)
