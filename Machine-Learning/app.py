@@ -8,7 +8,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 
 # Enable CORS for all routes
-CORS(app)
+CORS(app, resources={r"/recommend/*": {"origins": "https://digitaldelights.vercel.app"}})
 
 def fetch_products():
     response = requests.get('https://code-warriors-production.up.railway.app/product/')
